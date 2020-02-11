@@ -568,6 +568,7 @@ footer .copyrights-text {
 }
 
 .register-wrapper {
+  z-index: -1;
   height: 100vh;
   background: url(../images/register.jpeg);
 }
@@ -905,6 +906,7 @@ footer .copyrights-text {
     display: none;
   }
   #mobile-navbar {
+    z-index: 1111;
     display: block;
     /*
  * Just a quick hamburger

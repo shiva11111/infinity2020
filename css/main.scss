@@ -426,6 +426,7 @@ footer {
 //register.html
 
 .register-wrapper {
+  z-index: -1;
   height: 100vh;
   background: url(../images/register.jpeg);
   & .register {
@@ -744,6 +745,7 @@ footer {
     display: none;
   }
   #mobile-navbar {
+    z-index: 1111;
     display: block;
     #logo {
       position: absolute;
