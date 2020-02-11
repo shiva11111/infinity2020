@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header id="navbar">
+        <div class="one  ">
+          Logo <a href="home.html" class="name">Infinity</a>
+        </div>
+        <div class="two  underline"><a href="#">Home</a></div>
+        <div class="three  underline">
+          <a href="events.html">Events</a>
+        </div>
+        <div class="four  underline">
+          <a href="hackathon.html">Hackathon</a>
+        </div>
+        <div class="five  underline"><a href="#">Workshop</a></div>
+        <!-- <div class="six  underline">
+          <a href="signup.html">Register</a>
+        </div>
+        <div class="seven  underline"><a href="login.html">Login</a></div> -->
+      </header>
+      <header id="mobile-navbar">
+        <div id="menuToggle">
+          <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+          <input type="checkbox" />
+
+          <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+          <ul id="menu">
+            <a href="./home.html"><li>Home</li></a>
+            <a href="#"><li>Hackathon</li></a>
+            <a href="#"><li>Workshop</li></a>
+            <a href="./events.html"><li>Tech Events</li></a>
+          </ul>
+        </div>
+        <div id="logo">
+          Logo
+        </div>
+      </header>
+      <div class="main-wrapper-text">
+        <p>Witness The Greatest Technical Fest With Infinity 2020</p>
+        <p>on 6th & 7th March</p>
+        <p>UCE OU, Hyderabad.</p>
+        <button>
+          <a style="color: inherit; text-decoration: none;" href="./events.html"
+            >Register Now</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="about-us">
+      <p class="about-us-1">ABOUT US</p>
+      <p class="about-us-2">ABOUT US</p>
+      <p class="about-us-3">
+        Infinity 2020 a National Level Technical Symposium, is being organized
+        by Department of Computer Science and Engineering, during 06-07 March
+        2020.
+      </p>
+      <p class="about-us-4">
+        It is an annual event being conducted for more than a decade now.
+        Infinity is considered as a top notch event and has attracted many
+        brilliant minds.
+      </p>
+    </div>
+    <div class="timer">
+      <div class="timer-text">
+        <p class="timer-text-1">Days To Go</p>
+        <p class="timer-text-2">Until The Event</p>
+      </div>
+      <div class="timer-watch">
+        <div class="watch-1" id="days"></div>
+        <div class="watch-2">:</div>
+        <div class="watch-3" id="hours"></div>
+        <div class="watch-4">:</div>
+        <div class="watch-5" id="minutes"></div>
+        <div class="watch-6">:</div>
+        <div class="watch-7" id="seconds"></div>
+        <div class="watch-8 bottom">[Days]</div>
+        <div class="watch-9"></div>
+        <div class="watch-10 bottom">[Hours]</div>
+        <div class="watch-11 "></div>
+        <div class="watch-12  bottom">[Minutes]</div>
+        <div class="watch-13"></div>
+        <div class="watch-14  bottom">[Seconds]</div>
+      </div>
+    </div>
+    <div class="schedule-wrapper">
+      <div class="schedule">
+        <div class="schedule-head">
+          <p>SCHEDULE</p>
+        </div>
+        <div class="schedule-day">
+          <div class="schedule-day-1-p">
+            <p>First Day</p>
+            <p class="schedule-day-1-p-date">06th March 2020</p>
+          </div>
+          <div class="schedule-day-2-p">
+            <p>Second Day</p>
+            <p class="schedule-day-2-p-date">07th March 2020</p>
+          </div>
+          <div class="schedule-day-1-t">
+            <ul>
+              <li>8:30 AM</li>
+              <li>11:30 AM</li>
+              <li>1:30 PM</li>
+            </ul>
+          </div>
+          <div class="schedule-day-1-e">
+            <ul>
+              <li>Registration</li>
+              <li>Opening Ceremony</li>
+              <li>Workshop</li>
+            </ul>
+          </div>
+
+          <div class="schedule-day-2-t">
+            <ul>
+              <li>8:30 AM</li>
+              <li>2:30 AM</li>
+              <li>2:30 PM</li>
+            </ul>
+          </div>
+          <div class="schedule-day-2-e">
+            <ul>
+              <li>Registration</li>
+              <li>Opening Ceremony</li>
+              <li>Workshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="contact">
+        <p class="contact-head">Contact Us</p>
+
+        <p><i class="fa fa-envelope small"></i>infinity2020ou@gmail.com</p>
+
+        <p><i class="fa fa-phone-square small"></i>6304929087</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>UCE,Osmania University</p>
+        <p>Hyderabad-500007</p>
+      </div>
+      <div class="follow">
+        <p class="follow-head">Follow Us on</p>
+        <a
+          href="https://www.facebook.com/infinity2k19/"
+          class="fa fa-facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/infinity2020ou/"
+          class="fa fa-instagram"
+        ></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
+      <div class="copyrights">
+        <p class="copyrights-text">Copyright © 2020 Infinity.</p>
+      </div>
+    </footer>
+    <script src="/client/js/timer.js"></script>
+  </body>
+</html>

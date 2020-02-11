@@ -1,0 +1,424 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: rubik;
+}
+
+//navbar
+header {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  grid-template-columns: 40% 15% 15% 15% 15%;
+  // grid-gap: 2rem;
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 2rem;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: 0.3);
+  color: white;
+  & .one {
+    & .name {
+      font-size: 4rem;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+#mobile-navbar {
+  display: none;
+}
+.underline {
+  cursor: pointer;
+  & a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+  }
+
+  & a::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    top: 100%;
+    background: red;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+  }
+
+  & a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+.scroll {
+  background-color: rgba(255, 255, 255, 0.884);
+  color: black;
+  z-index: 9999;
+}
+
+//eventdetails
+.details-wrapper {
+  background: url(../images/5eec0448-0c89-40b0-9a24-859b03c73fdf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  grid-gap: 2rem;
+  height: 100%;
+  background-color: rgba(128, 0, 128, 0.692);
+  &-pic {
+    margin-top: 6rem;
+    background-image: url(../images/19adea1c-4a65-4a03-a56e-49ee4b03111f.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 80%;
+    box-shadow: 0 1rem 1rem;
+    align-self: center;
+    justify-self: right;
+  }
+  &-about {
+    margin-top: 6rem;
+    margin-left: 1rem;
+    align-self: center;
+    width: 70%;
+    & h1 {
+      font-size: 4rem;
+      color: white;
+      font-weight: 400;
+    }
+    & ul {
+      margin-top: 3rem;
+      list-style-type: decimal;
+      font-size: 1.5rem;
+      color: white;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+      & li {
+        margin: 1rem 0;
+      }
+    }
+    & h2 {
+      font-size: 2rem;
+      color: white;
+      font-weight: 400;
+    }
+    & button {
+      padding: 1rem 2rem;
+      outline: none;
+      background: transparent;
+      border: solid white 5px;
+      border-radius: 3rem;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: translateY(-3px);
+      }
+      &:active {
+        transform: translateY(3px);
+      }
+    }
+  }
+}
+
+//footer
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 90% 10%;
+  padding: 3rem 3rem;
+  background: #040110;
+  & .contact {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    &-head {
+      font-size: 2rem;
+      text-decoration: underline rgb(247, 57, 152);
+      margin-bottom: 2rem;
+    }
+    // margin-bottom: 3rem;
+  }
+  & .follow {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    color: white;
+    &-head {
+      font-size: 2rem;
+      text-decoration: underline rgb(247, 57, 152);
+      margin-bottom: 2rem;
+    }
+  }
+  & .copyrights {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    &-text {
+      font-size: 2rem;
+      color: gray;
+      text-decoration: underline;
+    }
+  }
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #9e0258;
+  color: white;
+}
+
+.fa {
+  padding: 1rem;
+  font-size: 2rem;
+  width: 4rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.small {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 425px) {
+  #navbar {
+    display: none;
+  }
+  #mobile-navbar {
+    display: block;
+    #logo {
+      position: absolute;
+      left: 80%;
+      top: 30%;
+    }
+    #menuToggle {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      z-index: 1;
+
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    #menuToggle a {
+      text-decoration: none;
+      color: #232323;
+
+      transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+      cursor: pointer;
+    }
+
+    #menuToggle input {
+      display: block;
+      width: 4rem;
+      height: 3.2rem;
+      position: absolute;
+      top: -0.7rem;
+      left: -0.5rem;
+
+      cursor: pointer;
+
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+
+      -webkit-touch-callout: none;
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+    #menuToggle span {
+      display: block;
+      width: 3.3rem;
+      height: 0.4rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+
+      background: #cdcdcd;
+      border-radius: 0.3rem;
+
+      z-index: 1;
+
+      transform-origin: 0.4rem 0;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+
+    /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-0.2rem, -0.1rem);
+      background: #ffffff;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -0.1rem);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    #menu {
+      cursor: pointer;
+      position: absolute;
+      width: 120vw;
+      height: 120vh;
+      margin: -10rem 0 0 -5rem;
+      padding: 5rem;
+      padding-top: 12.5rem;
+
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+    #menu a {
+      color: white;
+    }
+    #menu li {
+      padding: 1rem 0;
+      font-size: 3rem;
+    }
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked ~ ul {
+      transform: none;
+      width: 120vw;
+      height: 120vh;
+      background: #808080f7;
+    }
+  }
+  .details {
+    grid-template-columns: unset;
+    grid-template-rows: 40% 60%;
+    grid-row-gap: 0;
+    padding: 0 0 10rem 0;
+    &-pic {
+      margin-top: 20rem;
+      width: 90%;
+      justify-self: center;
+    }
+    &-about {
+      width: 90%;
+      margin-top: 15rem;
+      justify-self: center;
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 90% 10%;
+    padding: 3rem 0;
+    background: #040110;
+    & .contact {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      text-align: center;
+      font-size: 1rem;
+      color: white;
+      &-head {
+        font-size: 1.5rem;
+        text-decoration: underline rgb(247, 57, 152);
+        margin-bottom: 0;
+      }
+      // margin-bottom: 3rem;
+    }
+    & .follow {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      text-align: center;
+      color: white;
+      &-head {
+        font-size: 1.5rem;
+        text-decoration: underline rgb(247, 57, 152);
+      }
+    }
+    & .copyrights {
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      &-text {
+        font-size: 1.5rem;
+        color: gray;
+        text-decoration: underline;
+      }
+    }
+  }
+  .fa {
+    font-size: 1.5rem;
+    width: 3.5rem;
+  }
+}
