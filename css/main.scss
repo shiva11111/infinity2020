@@ -228,6 +228,43 @@ header {
   }
 }
 
+.sponsors {
+  padding: 14rem 8rem;
+  background-color: rgb(20, 0, 20);
+  &-head {
+    font-size: 11rem;
+    color: white;
+    font-weight: 500;
+  }
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-items: center;
+    margin-bottom: 1rem;
+    &-1,
+    &-2,
+    &-3,
+    &-4,
+    &-5,
+    &-6 {
+      & img {
+        width: 100%;
+      }
+      overflow: hidden;
+      transition: all 0.3s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+    &-1 {
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .bottom {
   font-size: 2rem;
   color: rgb(255, 0, 64);
@@ -503,6 +540,9 @@ footer {
       left: 30%;
     }
   }
+  .sponsors {
+    padding: 8rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .main-wrapper {
@@ -520,12 +560,25 @@ footer {
       left: 25%;
     }
   }
+  .sponsors {
+    &-head {
+      font-size: 6rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 425px) {
   .main-wrapper {
+    height: 95vh;
     &-text {
+      top: 25%;
       left: 2%;
+      & p {
+        font-size: 4rem;
+      }
+      & button {
+        font-size: 2rem;
+      }
     }
   }
   .about-us {
@@ -886,16 +939,86 @@ footer {
       background: #808080f7;
     }
   }
+  .sponsors {
+    padding: 2rem;
+    &-head {
+      font-size: 4rem;
+      font-weight: 400;
+    }
+    &-body {
+      display: flex;
+      overflow-x: auto;
+      padding: 0;
+      &-1,
+      &-2,
+      &-3,
+      &-4,
+      &-5,
+      &-6 {
+        width: 75%;
+        margin: 0 0.5rem;
+        height: max-content;
+        flex: 0 0 auto;
+        transform: translateY(-10px);
+        & img {
+          width: 30rem;
+          height: 30rem;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 375px) {
+  .main-wrapper {
+    height: 85vh;
+    &-text {
+      & p {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  .sponsors {
+    padding: 2rem;
+    &-head {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+    &-body {
+      display: flex;
+      overflow-x: auto;
+      padding: 0;
+      &-1,
+      &-2,
+      &-3,
+      &-4,
+      &-5,
+      &-6 {
+        width: 75%;
+        margin: 0 0.5rem;
+        height: max-content;
+        flex: 0 0 auto;
+        transform: translateY(-10px);
+        & img {
+          width: 25rem;
+          height: 25rem;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 325px) {
   .main-wrapper {
+    height: 75vh;
     &-text {
-      font-size: 2rem;
-      & button {
-        font-size: 1.5rem;
+      & p {
+        font-size: 2.5rem;
       }
     }
   }
@@ -931,6 +1054,36 @@ footer {
       width: 85%;
       left: 8%;
       top: 22%;
+    }
+  }
+  .sponsors {
+    &-head {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    &-body {
+      display: flex;
+      overflow-x: auto;
+      padding: 0;
+      &-1,
+      &-2,
+      &-3,
+      &-4,
+      &-5,
+      &-6 {
+        width: 75%;
+        margin: 0 0.5rem;
+        height: max-content;
+        flex: 0 0 auto;
+        transform: translateY(-10px);
+        & img {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
