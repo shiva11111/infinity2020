@@ -1,4 +1,4 @@
-var countDownDate = new Date("Mar 6, 2020 08:00:00").getTime();
+var countDownDate = new Date("06/03/2020").getTime();
 console.log(countDownDate);
 
 // Update the count down every 1 second
